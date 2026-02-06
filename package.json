@@ -1,11 +1,37 @@
 {
-  "name": "nasikusa/fspy-vmd-converter",
+  "name": "fspy2vmd",
   "version": "0.1.0",
   "description": "fSpy camera data applier and VMD exporter for Three.js",
+  "license": "MIT",
+  "author": "nasikusa",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nasikusa/fspy2vmd.git"
+  },
+  "bugs": {
+    "url": "https://github.com/nasikusa/fspy2vmd/issues"
+  },
+  "homepage": "https://github.com/nasikusa/fspy2vmd#readme",
+  "keywords": [
+    "fspy",
+    "vmd",
+    "mmd",
+    "three",
+    "threejs",
+    "camera"
+  ],
   "type": "module",
   "sideEffects": false,
+  "scripts": {
+    "build": "tsup index.ts --format esm,cjs --dts --clean",
+    "prepublishOnly": "npm run build"
+  },
   "peerDependencies": {
     "three": "^0.182.0"
+  },
+  "devDependencies": {
+    "tsup": "^8.5.0",
+    "typescript": "^5.9.3"
   },
   "main": "./dist/index.cjs",
   "module": "./dist/index.js",
@@ -18,6 +44,14 @@
     }
   },
   "files": [
-    "dist"
-  ]
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": ">=18"
+  }
 }
