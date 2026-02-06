@@ -1,15 +1,25 @@
-# FspyVmdConverter
+# fspy2vmd
 
 `FspyVmdConverter` は、以下を 1 つで扱うユーティリティです。
 
 - fSpy データを `PerspectiveCamera` に適用
 - `PerspectiveCamera` から VMD カメラモーション (`ArrayBuffer`) を生成
 
+## インストール
+
+`three` は peer dependency です。
+
+```bash
+npm install fspy2vmd three
+yarn add fspy2vmd three
+pnpm add fspy2vmd three
+```
+
 ## 基本的な使い方
 
 ```ts
 import * as THREE from "three";
-import { FspyVmdConverter, type FspyData } from "@/utils/fspy";
+import { FspyVmdConverter, type FspyData } from "fspy2vmd";
 
 const camera = new THREE.PerspectiveCamera(75, 16 / 9, 0.1, 2000);
 const fspy: FspyData = /* your fSpy JSON */;
@@ -93,7 +103,7 @@ const vmdBuffer = converter.exportVmd({
 import {
   FSPY_VMD_CONVERTER_ERROR_CODE,
   FspyVmdConverterError,
-} from "@/utils/fspy";
+} from "fspy2vmd";
 
 try {
   converter.applyFSpyToCamera(fspy);
