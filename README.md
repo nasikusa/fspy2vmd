@@ -1,5 +1,7 @@
 # fspy2vmd
 
+![fspy2vmd sample image](./image.jpg)
+
 English README: [README.en.md](./README.en.md)
 
 fSpy のカメラ情報を `three` の `PerspectiveCamera` に反映し、
