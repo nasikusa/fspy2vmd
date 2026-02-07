@@ -1,5 +1,7 @@
 # fspy2vmd
 
+English README: [README.en.md](./README.en.md)
+
 fSpy のカメラ情報を `three` の `PerspectiveCamera` に反映し、
 そのカメラ状態から MMD 用 VMD カメラモーションを出力するライブラリです。
 
